@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="26578260-C6B5-9905-FBD9-70BCD07FFC98" name="Palmares">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 14:59:54 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="premii_individuale" id="F67FBAD9-DB31-8B8E-B23D-B56BC6055128">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:01:17 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>premii_individuale_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="premii_individuale &gt;=0"/>
+</checkConstraint>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numar_cupe" id="22EDB0C2-2621-3FE5-D11F-9729AA7D957E">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:02:00 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>numar_cupe_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="numar_cupe &gt;=0"/>
+</checkConstraint>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_player" id="DE11D409-FF28-4BC1-F866-95A9455E79C8">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:12:07 UTC</createdTime>
+<generatorID>A0579274-EE9D-A84B-8294-E1020C0D5951</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<referedAttribute>0F32D53D-F4EF-95A6-25D1-49D440538DBA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

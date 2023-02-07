@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F3FCC5DF-378B-8483-0B8E-CEBC0BA785B1" containerWithKeyObject="02E18346-5554-5DD2-3842-AF2F2CFF61CD" localFKIndex="4BE101B7-56FD-B84A-41D1-D027F840D3B8" name="palmares-dir_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<generatorID>50ED4AAE-D11F-D2B8-C75F-D4F52ED8B449</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<referredTableLongName>Palmares</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>63D9D518-8232-9C2E-91EA-6F3A82DBE3AE</referredTableID>
+<keyObject>16DEF1B7-6334-1791-1A82-DAA1F0CF586A</keyObject>
+<referredKeyID>16DEF1B7-6334-1791-1A82-DAA1F0CF586A</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Palmares_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

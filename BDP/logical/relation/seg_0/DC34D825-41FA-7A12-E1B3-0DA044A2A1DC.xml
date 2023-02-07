@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="grupe-competitie_FK" directorySegmentName="seg_0" id="DC34D825-41FA-7A12-E1B3-0DA044A2A1DC">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:16:39 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<useSurrogateKey>true</useSurrogateKey>
+<identifying>false</identifying>
+<nameOnSource>pot avea mai multe</nameOnSource>
+<nameOnTarget>pot fi doar intr-o</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>CBF30CBC-FA75-20E2-96E9-563319CB1BCB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>74FEE74F-FB69-BA6D-F4FB-2796F83FB00B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

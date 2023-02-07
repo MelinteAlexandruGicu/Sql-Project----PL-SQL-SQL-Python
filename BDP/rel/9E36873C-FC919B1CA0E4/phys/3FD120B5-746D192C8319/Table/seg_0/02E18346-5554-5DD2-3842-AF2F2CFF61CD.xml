@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="Directionare" directorySegmentName="seg_0" id="02E18346-5554-5DD2-3842-AF2F2CFF61CD">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="trofee_trofee_ID" id="5466C524-9CE0-0721-C5E7-40B16D5221E0">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 14:22:43 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Palmares_Palmares_ID" id="6E1AF01B-D391-B67C-9E50-C8F93D2DA748">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Directionare_trofee_FK" id="054B7C49-A698-0CFC-CE79-37F2A4C0F1B2">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 14:22:43 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="palmares-dir_FK" id="4BE101B7-56FD-B84A-41D1-D027F840D3B8">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="palmares-trofee_PK" id="BFC8082B-A5EC-2F94-64E0-5E3FDEEB11C0">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

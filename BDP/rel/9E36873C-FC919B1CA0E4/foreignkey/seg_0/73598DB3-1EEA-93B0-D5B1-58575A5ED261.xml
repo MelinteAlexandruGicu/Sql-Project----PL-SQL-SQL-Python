@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="73598DB3-1EEA-93B0-D5B1-58575A5ED261" containerWithKeyObject="0C3C9C81-E952-12FE-24B9-6D0CAA77B86B" localFKIndex="EEA9CE1D-7BE3-CD09-C300-D4E6C534A96E" name="nationala_jucator_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 14:57:29 UTC</createdTime>
+<generatorID>D949BF57-1FD5-06FF-9F11-6BE33955A231</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<referredTableLongName>echipa_nationala</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>3A663F43-6476-EDD0-8845-EB499E7858D2</referredTableID>
+<keyObject>EF58F7CF-1EBB-499D-4815-F36FDF62DDF3</keyObject>
+<referredKeyID>EF58F7CF-1EBB-499D-4815-F36FDF62DDF3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>tara</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

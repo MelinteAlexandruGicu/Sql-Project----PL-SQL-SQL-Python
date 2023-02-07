@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<PackageOracle class="oracle.dbtools.crest.model.design.storage.oracle.PackageOracle" name="palmaresP" directorySegmentName="seg_0" id="45EBDDCE-3EFD-4B7A-6605-5EA0BAD2CADA">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 18:22:40 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<source>CREATE OR REPLACE PACKAGE palmaresP AS
+	FUNCTION get_id_palmares(p_id IN jucator_de_fotbal.id_player%TYPE) RETURN NUMBER;
+	PROCEDURE insert_palmares(v_individuale IN palmares.premii_individuale%TYPE, v_cupe IN palmares.numar_cupe%TYPE, v_numeJucator IN jucator_de_fotbal.nume_jucator%TYPE);
+END palmaresP;</source>
+<body class="oracle.dbtools.crest.model.design.storage.oracle.PackageBodyOracle" name="palmaresP" id="45EBDDCE-3EFD-4B7A-6605-5EA0BAD2CADA">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 18:22:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<source>CREATE OR REPLACE PACKAGE BODY palmaresP AS
+	FUNCTION get_id_palmares(p_id IN jucator_de_fotbal.id_player%TYPE) RETURN NUMBER AS
+	v_id palmares.Palmares_ID%TYPE;
+	BEGIN
+		SELECT Palmares_ID
+		INTO v_id
+		FROM Palmares
+		WHERE id_player = p_id;
+		RETURN v_id;
+	END get_id_palmares;
+	
+	PROCEDURE insert_palmares(v_individuale IN palmares.premii_individuale%TYPE, v_cupe IN palmares.numar_cupe%TYPE, v_numeJucator IN jucator_de_fotbal.nume_jucator%TYPE) IS
+	BEGIN
+		INSERT INTO palmares VALUES(v_individuale, v_cupe, jucator.get_id_player(v_numeJucator), NULL);
+	END insert_palmares;
+END palmaresP;</source>
+</body>
+</PackageOracle>

@@ -1,0 +1,295 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0C3C9C81-E952-12FE-24B9-6D0CAA77B86B" name="jucator_de_fotbal">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>2EFED7CF-D12B-65DF-B2AA-41B2871C6E24</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_player" id="3CDA4295-34CB-5A7A-FC18-059DDA942793">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>0F32D53D-F4EF-95A6-25D1-49D440538DBA</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nume_jucator" id="3AF96B75-F876-B70C-DC1A-B2170098085C">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>A2190BBF-FF0F-E4D6-EC63-2A56245A2359</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>nume_jucator_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(nume_jucator) &gt; 5 and REGEXP_LIKE ( nume_jucator, &apos;^[A-Za-z ]+$&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_nasterii" id="6AAF933D-C5F9-7CBC-139B-F8B03E7E2200">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>4ED77A34-F685-52A8-EB0A-7D9E9C6305E6</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="inaltime" id="B1CB2389-9711-0037-0D1B-A0E94289D651">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>373A5682-2424-69F4-35D5-BDD6FDDE8CAA</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>inaltime_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="inaltime &gt; 150"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="greutate" id="6349C15C-EF63-C966-1B0B-E5585CF94AD3">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>0BDED9C0-B05B-3BCB-45F3-1EF4CAFCA8FA</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>greutate_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="greutate &gt; 50"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pozitie" id="A0790582-A9E0-6E20-9590-A02C03AD9FCA">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>8AE77AEF-47CC-2C95-D33B-59BA8A916821</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>pozitie_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<listOfValues>
+<valueDef value="atacant" description=""/>
+<valueDef value="fundas" description=""/>
+<valueDef value="mijlocas" description=""/>
+<valueDef value="portar" description=""/>
+</listOfValues>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numar_goluri" id="96255773-98EE-932A-F642-80DB61C76B96">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>6C9C2671-19F1-C1C4-3D49-D1357700B74C</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>numar_goluri_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="numar_goluri &gt;= 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numar_meciuri" id="D0EBA490-5B4B-D026-DA6E-02672C2D1DCE">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>1FEAD9FA-8485-2904-CBCE-178383F742F9</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>numar_meciuri_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="numar_meciuri &gt;=0"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numar_tricou" id="BF541847-3C8C-816B-70CD-F239BFD91099">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>B1A99B3F-0CE3-8EE1-E2A4-5B406BEF29E4</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>numar_tricou_CK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>99</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="convocare" id="7FF9D78C-8C16-BFE9-033B-77CA75E853BE">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-13 06:30:15 UTC</createdTime>
+<generatorID>18027E31-CEE6-646C-E39F-CFAF39B645D3</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>convocare_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<listOfValues>
+<valueDef value="convocat" description=""/>
+<valueDef value="neconvocat" description=""/>
+</listOfValues>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="retras" id="814562F8-BC0D-55D6-5FB2-28DC61332C3B">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-13 06:48:56 UTC</createdTime>
+<generatorID>529F7A6D-8F19-FE5A-7606-7CE75D7B948E</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>retras_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<listOfValues>
+<valueDef value="da" description=""/>
+<valueDef value="nu" description=""/>
+</listOfValues>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="atuu" id="DAC84D41-C904-EA05-D380-B19305948251">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-13 07:03:03 UTC</createdTime>
+<generatorID>FA788D3B-19C5-110C-B016-5E2948893478</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_club" id="AC7A193D-6876-C425-2033-8D1FF661350F">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 14:57:29 UTC</createdTime>
+<generatorID>E19C8F4D-C6F0-DF53-3613-2DD961E31A01</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="175EB73B-423B-0EC0-8AC7-02A59A2B3EC7" referredColumn="9A597E0E-35ED-DB2B-11CC-340B2D7CEE92"/>
+</associations>
+</Column>
+<Column name="tara" id="961B132C-3A00-B739-67F1-6515C6605266">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 14:57:29 UTC</createdTime>
+<generatorID>663E8EDD-CB15-D62E-9D7B-E4C46B039FA2</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="73598DB3-1EEA-93B0-D5B1-58575A5ED261" referredColumn="4D751A7E-2F1C-AD21-EB64-5B0A9C186F2D"/>
+</associations>
+</Column>
+<Column name="id_liga" id="3EC16DE3-119E-04B6-4FC3-2A0C04F2AD4B">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:35:10 UTC</createdTime>
+<generatorID>98DD8F52-6694-A47B-BE11-E7DAC15BC511</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5FCD2E4C-47D9-49D2-AC36-831D3B40E17A" name="jucator_de_fotbal_PK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>FA537E0F-F323-C534-3390-7D4B8D1A6C57</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3CDA4295-34CB-5A7A-FC18-059DDA942793"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DF522D44-F9B1-1865-0570-6475D720A318" name="Key_2v2">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:57:53 UTC</createdTime>
+<generatorID>7ED48EC3-D032-8599-2ED8-80298DB7CA7A</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3AF96B75-F876-B70C-DC1A-B2170098085C"/>
+<colUsage columnID="814562F8-BC0D-55D6-5FB2-28DC61332C3B"/>
+<colUsage columnID="7FF9D78C-8C16-BFE9-033B-77CA75E853BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F9AD4CE0-61D6-C6D0-248D-3C0D4AD27B5A" name="echipa_jucator_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 14:57:29 UTC</createdTime>
+<generatorID>B5B067C9-7039-6676-AEDF-4F4AA23678F0</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC7A193D-6876-C425-2033-8D1FF661350F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EEA9CE1D-7BE3-CD09-C300-D4E6C534A96E" name="nationala_jucator_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 14:57:29 UTC</createdTime>
+<generatorID>D949BF57-1FD5-06FF-9F11-6BE33955A231</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="961B132C-3A00-B739-67F1-6515C6605266"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="87A44FE1-5BD9-D797-0E19-673A202B357C" containerWithKeyObject="259A8ACE-7B5B-D8F9-3BC3-D4F680BE33F5" localFKIndex="1DCBC668-F585-44BE-E0FA-EB723088F7B2" name="liga-competitie_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 16:00:52 UTC</createdTime>
+<generatorID>44A67C4C-802A-9B3C-C1BE-6C8E896A6F5B</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<referredTableLongName>liga_de_fotbal</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>DF7A28AB-0BA7-FE66-20D0-251E021D010A</referredTableID>
+<keyObject>157C667E-CF10-8CE1-7E76-D2F2EF2F374E</keyObject>
+<referredKeyID>157C667E-CF10-8CE1-7E76-D2F2EF2F374E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_liga</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="competitie" directorySegmentName="seg_0" id="259A8ACE-7B5B-D8F9-3BC3-D4F680BE33F5">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="id_liga" id="17B45DB5-DCAA-4588-0FD4-5BCAA13143B1">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:56:24 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="tip" id="31FC14CB-C4BB-7039-52D1-17EBA39362E2">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="numar_liga" id="A160591D-FD38-FE15-58B0-38CAFA6CD36F">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="numar_trofee_individuale" id="B3BD3759-D090-E9A2-FAA4-824342F663C5">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nume_competitie" id="C4A98462-BCFA-08CB-1A2C-E28551C922AE">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="numar_trofee_colective" id="C60B9AF3-234E-99BB-00E1-4158B5E87901">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="Grupe_nationale_ID" id="EB3460BF-D7D8-468E-9527-A5931C5561EF">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:17:27 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="liga-competitie_FK" id="1DCBC668-F585-44BE-E0FA-EB723088F7B2">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 16:00:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="grupe-competitie_FK" id="9EFF8E3F-87E2-0E87-FEB3-57F46BE381DF">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:17:27 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="competitii_PK" id="83658C8A-6628-FCFF-69FF-56B3943E89B0">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

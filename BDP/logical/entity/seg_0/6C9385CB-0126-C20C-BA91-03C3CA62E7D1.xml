@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6C9385CB-0126-C20C-BA91-03C3CA62E7D1" name="echipa_de_club">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:21:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_club" id="867BAEA2-4817-8003-8478-B6A66E39FA32">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:59:02 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nume_echipa" id="CF97ADF7-26FD-0DA0-F3E4-A96FDBFA2572">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:00:26 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>nume_echipa_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(nume_echipa) &gt; 8 and REGEXP_LIKE (nume_echipa, &apos;^[A-Za-z0-9 ]+$&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="oras" id="F0A02B2C-9B6F-4B1A-C72A-0FCE77F6E1D4">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:01:10 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>oras_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(oras) &gt; 3 and REGEXP_LIKE (oras, &apos;^[A-Za-z ]+$&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numar_jucatori" id="C407643F-DFAB-E638-E524-01C7739FDC85">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:01:24 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>numar_jucatori_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>11</beginValue>
+<endValue>38</endValue>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="antrenor_principal" id="110FAC12-18F9-7A18-BB10-2EFB65D7B69E">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:01:38 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>antrenor_principal_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(antrenor_principal) &gt; 5  and REGEXP_LIKE ( antrenor_principal, &apos;^[A-Za-z ]+$&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_liga" id="97A61895-C66C-8884-D8C5-3291BFB6FFD5">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:56:05 UTC</createdTime>
+<generatorID>175E0CB9-2DA5-1B3D-BAEE-061F4A68249E</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<referedAttribute>2FD71884-1ADB-F329-B6A0-4148D2D375FE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="85003448-37BB-5DD5-5493-F828AE31467A" name="echipa_de_club_PK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:00:30 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>867BAEA2-4817-8003-8478-B6A66E39FA32</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="CBD98172-945C-C57B-4B94-9618E4EF8927" name="Key_2">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:56:38 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="false"/>
+</engineerTo>
+<newElementsIDs>CF97ADF7-26FD-0DA0-F3E4-A96FDBFA2572</newElementsIDs>
+<usedAttributes>
+<attributeRef>CF97ADF7-26FD-0DA0-F3E4-A96FDBFA2572</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

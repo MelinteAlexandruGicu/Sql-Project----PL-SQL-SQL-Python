@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="04657065-FA1D-466B-4B7D-F914423AE55C" name="trofee">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>B6F4C44F-3859-E399-8E6F-EF46AD30FFED</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="individuale" id="31D6BDF2-5DFC-94AA-17CC-2DAF10FB28EC">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>B9DB5CA7-E01B-64C7-CCD2-07D8924CD89C</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>individuale_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="individuale &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="colective" id="D49F47A7-DA5E-7302-D1B2-2E4089520AEC">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>405B222E-233C-E8EB-DCC2-D5EA75969D63</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>colective_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="colective &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nume_competitie" id="F8CCC905-D78E-D5E4-367B-3CDB420F573A">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>BE72BCAB-9D7E-1238-3864-FF13E4D0820B</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>nume_competitie_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(nume_competitie) &gt; 8 and regexp_like(nume_competitie, &apos;[a-zA-Z0-9]&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D842E503-4BCB-B91B-24BB-A25A3EA27364" referredColumn="C4A98462-BCFA-08CB-1A2C-E28551C922AE"/>
+</associations>
+</Column>
+<Column name="trofee_ID" id="61E88B4D-5B30-6D66-EB4F-C8F12F59F23F">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="anul_trofeului" id="4C9C671E-B5C6-1771-3CE9-D41C82B7237B">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<generatorID>0366229A-61BE-BA09-11E2-5C1EE9A96698</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>anul_trofeului_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>2000</beginValue>
+<endValue>2020</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="61239E22-0F38-2E6E-E81A-D3B3B762E095" name="trofee_PK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-28 14:34:03 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61E88B4D-5B30-6D66-EB4F-C8F12F59F23F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="36DD24B3-3D47-B934-AFEA-0527D77A19A5" name="trofee-comp_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>B8586D96-6E6B-A242-0592-FC4A7DE2D4EC</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F8CCC905-D78E-D5E4-367B-3CDB420F573A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

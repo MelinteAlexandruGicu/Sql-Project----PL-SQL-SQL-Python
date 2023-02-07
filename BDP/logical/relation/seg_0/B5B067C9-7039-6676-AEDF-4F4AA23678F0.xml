@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="echipa_jucator_FK" directorySegmentName="seg_0" id="B5B067C9-7039-6676-AEDF-4F4AA23678F0">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 14:56:25 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<sourcePk>85003448-37BB-5DD5-5493-F828AE31467A</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>contine mai multi</nameOnSource>
+<nameOnTarget>apartine doar de o</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6C9385CB-0126-C20C-BA91-03C3CA62E7D1</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2EFED7CF-D12B-65DF-B2AA-41B2871C6E24</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

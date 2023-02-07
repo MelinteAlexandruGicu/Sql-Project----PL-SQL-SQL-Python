@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B6F4C44F-3859-E399-8E6F-EF46AD30FFED" name="trofee">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:22:09 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="individuale" id="B9DB5CA7-E01B-64C7-CCD2-07D8924CD89C">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:57:58 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>individuale_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="individuale &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="colective" id="405B222E-233C-E8EB-DCC2-D5EA75969D63">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:58:40 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>colective_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="colective &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nume_competitie" id="BE72BCAB-9D7E-1238-3864-FF13E4D0820B">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:17:12 UTC</createdTime>
+<generatorID>B8586D96-6E6B-A242-0592-FC4A7DE2D4EC</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>nume_competitie_CK</constraintName>
+<referedAttribute>64199905-216D-7543-BB13-89D5FEBC648E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(nume_competitie) &gt; 8 and regexp_like(nume_competitie, &apos;[a-zA-Z0-9]&apos;)"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="anul_trofeului" id="0366229A-61BE-BA09-11E2-5C1EE9A96698">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:15:42 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>anul_trofeului_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>2000</beginValue>
+<endValue>2020</endValue>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C4341ECD-9E68-D010-6C72-6A8A12CE06B7" name="trofee_PK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-28 14:34:24 UTC</createdTime>
+<generatorID>61239E22-0F38-2E6E-E81A-D3B3B762E095</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+</identifier>
+</identifiers>
+</Entity>

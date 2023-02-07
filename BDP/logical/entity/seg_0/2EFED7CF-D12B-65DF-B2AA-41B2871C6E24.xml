@@ -1,0 +1,293 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2EFED7CF-D12B-65DF-B2AA-41B2871C6E24" name="jucator_de_fotbal">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:19:33 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_player" id="0F32D53D-F4EF-95A6-25D1-49D440538DBA">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:23:03 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nume_jucator" id="A2190BBF-FF0F-E4D6-EC63-2A56245A2359">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:25:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>nume_jucator_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(nume_jucator) &gt; 5 and REGEXP_LIKE ( nume_jucator, &apos;^[A-Za-z ]+$&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_nasterii" id="4ED77A34-F685-52A8-EB0A-7D9E9C6305E6">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:36:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="inaltime" id="373A5682-2424-69F4-35D5-BDD6FDDE8CAA">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:36:50 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>inaltime_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="inaltime &gt; 150"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="greutate" id="0BDED9C0-B05B-3BCB-45F3-1EF4CAFCA8FA">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:54:08 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>greutate_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="greutate &gt; 50"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pozitie" id="8AE77AEF-47CC-2C95-D33B-59BA8A916821">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:54:27 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>pozitie_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<listOfValues>
+<valueDef value="atacant" description=""/>
+<valueDef value="fundas" description=""/>
+<valueDef value="mijlocas" description=""/>
+<valueDef value="portar" description=""/>
+</listOfValues>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="atuu" id="FA788D3B-19C5-110C-B016-5E2948893478">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-13 07:02:43 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numar_goluri" id="6C9C2671-19F1-C1C4-3D49-D1357700B74C">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:55:06 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>numar_goluri_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="numar_goluri &gt;= 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numar_meciuri" id="1FEAD9FA-8485-2904-CBCE-178383F742F9">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:56:14 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>numar_meciuri_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="numar_meciuri &gt;=0"/>
+</checkConstraint>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numar_tricou" id="B1A99B3F-0CE3-8EE1-E2A4-5B406BEF29E4">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:56:55 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>numar_tricou_CK</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>99</endValue>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="convocare" id="18027E31-CEE6-646C-E39F-CFAF39B645D3">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-13 06:23:34 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>convocare_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<listOfValues>
+<valueDef value="convocat" description=""/>
+<valueDef value="neconvocat" description=""/>
+</listOfValues>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="retras" id="529F7A6D-8F19-FE5A-7606-7CE75D7B948E">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-13 06:47:14 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>retras_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<listOfValues>
+<valueDef value="da" description=""/>
+<valueDef value="nu" description=""/>
+</listOfValues>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_club" id="E19C8F4D-C6F0-DF53-3613-2DD961E31A01">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 14:56:25 UTC</createdTime>
+<generatorID>B5B067C9-7039-6676-AEDF-4F4AA23678F0</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<referedAttribute>867BAEA2-4817-8003-8478-B6A66E39FA32</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tara" id="663E8EDD-CB15-D62E-9D7B-E4C46B039FA2">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 14:56:58 UTC</createdTime>
+<generatorID>D949BF57-1FD5-06FF-9F11-6BE33955A231</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<referedAttribute>65205A07-3993-CD54-B646-CBC0FFB681E1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_liga" id="7E87B366-5929-9113-87F2-CF28DD9ED4E2">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-28 14:34:24 UTC</createdTime>
+<generatorID>3EC16DE3-119E-04B6-4FC3-2A0C04F2AD4B</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FA537E0F-F323-C534-3390-7D4B8D1A6C57" name="jucator_de_fotbal_PK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:23:16 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0F32D53D-F4EF-95A6-25D1-49D440538DBA</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="7ED48EC3-D032-8599-2ED8-80298DB7CA7A" name="Key_2v2">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:55:16 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="false"/>
+</engineerTo>
+<newElementsIDs>A2190BBF-FF0F-E4D6-EC63-2A56245A2359,529F7A6D-8F19-FE5A-7606-7CE75D7B948E,18027E31-CEE6-646C-E39F-CFAF39B645D3</newElementsIDs>
+<usedAttributes>
+<attributeRef>A2190BBF-FF0F-E4D6-EC63-2A56245A2359</attributeRef>
+<attributeRef>529F7A6D-8F19-FE5A-7606-7CE75D7B948E</attributeRef>
+<attributeRef>18027E31-CEE6-646C-E39F-CFAF39B645D3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

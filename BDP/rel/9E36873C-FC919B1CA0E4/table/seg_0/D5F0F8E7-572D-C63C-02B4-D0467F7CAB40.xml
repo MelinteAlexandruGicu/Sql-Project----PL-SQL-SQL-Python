@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D5F0F8E7-572D-C63C-02B4-D0467F7CAB40" name="echipa_de_club">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>6C9385CB-0126-C20C-BA91-03C3CA62E7D1</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_club" id="9A597E0E-35ED-DB2B-11CC-340B2D7CEE92">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>867BAEA2-4817-8003-8478-B6A66E39FA32</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nume_echipa" id="74D06FD0-6D31-3173-5607-CD7E102F7484">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>CF97ADF7-26FD-0DA0-F3E4-A96FDBFA2572</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>nume_echipa_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(nume_echipa) &gt; 8 and REGEXP_LIKE (nume_echipa, &apos;^[A-Za-z0-9 ]+$&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="oras" id="42746934-D97A-C0CD-387A-1062EC78D444">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>F0A02B2C-9B6F-4B1A-C72A-0FCE77F6E1D4</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>oras_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(oras) &gt; 3 and REGEXP_LIKE (oras, &apos;^[A-Za-z ]+$&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numar_jucatori" id="61268B66-122B-7C4C-E25A-E27BF689D6D6">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>C407643F-DFAB-E638-E524-01C7739FDC85</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>numar_jucatori_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>11</beginValue>
+<endValue>38</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="antrenor_principal" id="8BC3DA09-46B0-2C3B-DBD3-822C8107CA6B">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>110FAC12-18F9-7A18-BB10-2EFB65D7B69E</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>antrenor_principal_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(antrenor_principal) &gt; 5  and REGEXP_LIKE ( antrenor_principal, &apos;^[A-Za-z ]+$&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_liga" id="1AB57225-FBAA-DD80-A1F7-37E36C1F2F76">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 16:00:52 UTC</createdTime>
+<generatorID>97A61895-C66C-8884-D8C5-3291BFB6FFD5</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F83E8B7D-A88A-E409-9907-E6F0E8E76FB7" referredColumn="E479E9D5-FAC3-65AE-0DD3-1AF9D1C0ED6A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A7A0C670-77F4-E596-6458-137D1A1D08E6" name="echipa_de_club_PK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>85003448-37BB-5DD5-5493-F828AE31467A</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9A597E0E-35ED-DB2B-11CC-340B2D7CEE92"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="402C6664-44A6-4272-5444-ED9F0F60DC29" name="Key_2">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:57:53 UTC</createdTime>
+<generatorID>CBD98172-945C-C57B-4B94-9618E4EF8927</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74D06FD0-6D31-3173-5607-CD7E102F7484"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="79B08F56-8A4F-6D68-0072-AD4C7F99CA05" name="liga-echipa_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 16:00:52 UTC</createdTime>
+<generatorID>175E0CB9-2DA5-1B3D-BAEE-061F4A68249E</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1AB57225-FBAA-DD80-A1F7-37E36C1F2F76"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<StoredProcedureOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.StoredProcedureOraclev10g" name="afisare_numar_echipe" directorySegmentName="seg_0" id="13DBE7F7-7F6D-1291-FC9B-E07A03D9C470">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-10 19:05:42 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<source>CREATE OR REPLACE PROCEDURE afisare_numar_echipe(v_tara IN echipa_nationala.tara%TYPE) IS
+BEGIN
+	dbms_output.put_line(&apos;Numar echipe --&gt; &apos;||get_nr_echipe(liga.get_id_liga(v_tara)));
+END afisare_numar_echipe;</source>
+</StoredProcedureOraclev10g>

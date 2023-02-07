@@ -1,0 +1,152 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="259A8ACE-7B5B-D8F9-3BC3-D4F680BE33F5" name="competitie">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>74FEE74F-FB69-BA6D-F4FB-2796F83FB00B</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nume_competitie" id="C4A98462-BCFA-08CB-1A2C-E28551C922AE">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>64199905-216D-7543-BB13-89D5FEBC648E</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(nume_competitie) &gt; 8 and REGEXP_LIKE ( nume_competitie, &apos;^[A-Za-z0-9 ]+$&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tip" id="31FC14CB-C4BB-7039-52D1-17EBA39362E2">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>11D2C6C4-7227-4B48-C0EF-9E8E9002C7E3</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<listOfValues>
+<valueDef value="Echipe de club" description=""/>
+<valueDef value="Echipe nationale" description=""/>
+</listOfValues>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numar_trofee_individuale" id="B3BD3759-D090-E9A2-FAA4-824342F663C5">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>54C09BD3-891F-7A8F-5F78-9D11ADDE3A08</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numar_trofee_colective" id="C60B9AF3-234E-99BB-00E1-4158B5E87901">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>5BDA5BDD-D74E-01EF-E42F-7B620D87DC31</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>numar_tr_colective_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="numar_trofee_colective &gt; 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numar_liga" id="A160591D-FD38-FE15-58B0-38CAFA6CD36F">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-13 06:58:56 UTC</createdTime>
+<generatorID>E3A4CFDD-668D-E984-6853-DE2B70204E04</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Grupe_nationale_ID" id="EB3460BF-D7D8-468E-9527-A5931C5561EF">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:17:27 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A7999B38-F52A-46BB-2C9B-258CF19EC25B" referredColumn="7CF9E8F8-F61A-EEC3-E559-4EB1A2E882D4"/>
+</associations>
+</Column>
+<Column name="id_liga" id="17B45DB5-DCAA-4588-0FD4-5BCAA13143B1">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:56:24 UTC</createdTime>
+<generatorID>50752661-737B-6DBA-A179-D44EBC42F2BB</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="87A44FE1-5BD9-D797-0E19-673A202B357C" referredColumn="E479E9D5-FAC3-65AE-0DD3-1AF9D1C0ED6A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="83658C8A-6628-FCFF-69FF-56B3943E89B0" name="competitii_PK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>A58F8379-34BD-BF1E-54B8-F603735C8D57</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C4A98462-BCFA-08CB-1A2C-E28551C922AE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9EFF8E3F-87E2-0E87-FEB3-57F46BE381DF" name="grupe-competitie_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:17:27 UTC</createdTime>
+<generatorID>DC34D825-41FA-7A12-E1B3-0DA044A2A1DC</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EB3460BF-D7D8-468E-9527-A5931C5561EF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1DCBC668-F585-44BE-E0FA-EB723088F7B2" name="liga-competitie_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 16:00:52 UTC</createdTime>
+<generatorID>44A67C4C-802A-9B3C-C1BE-6C8E896A6F5B</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17B45DB5-DCAA-4588-0FD4-5BCAA13143B1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

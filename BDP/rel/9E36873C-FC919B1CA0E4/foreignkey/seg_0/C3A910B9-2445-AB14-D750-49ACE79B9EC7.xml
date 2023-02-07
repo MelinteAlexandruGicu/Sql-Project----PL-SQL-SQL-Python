@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C3A910B9-2445-AB14-D750-49ACE79B9EC7" containerWithKeyObject="3A663F43-6476-EDD0-8845-EB499E7858D2" localFKIndex="EED55661-B95C-586C-DE27-B1E34E633B40" name="Grupe-echipa_nat_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:10:07 UTC</createdTime>
+<generatorID>52A85CBB-6EFE-9AEB-B843-DB18A261C625</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<referredTableLongName>Grupe_nationale</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>21BBC646-DF21-C6C2-17A4-BB6877E10B68</referredTableID>
+<keyObject>EFFC7AE6-37BF-A575-4B80-63F451912FD2</keyObject>
+<referredKeyID>EFFC7AE6-37BF-A575-4B80-63F451912FD2</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Grupe_nationale_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3A663F43-6476-EDD0-8845-EB499E7858D2" name="echipa_nationala">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>6589ACE7-4BE0-0F95-697F-3AAD1BFFB34A</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tara" id="4D751A7E-2F1C-AD21-EB64-5B0A9C186F2D">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>65205A07-3993-CD54-B646-CBC0FFB681E1</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>tara_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(tara) &gt;= 3 and REGEXP_LIKE (tara, &apos;^[A-Z]+[ A-Z]+$&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numar_jucatori_convocati" id="E6F3DE32-8E98-D4C8-C3B2-583094583AE5">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>84E98806-1668-EF26-46DE-6F282AE2C3F7</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>numar_jucatori_convocati_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>11</beginValue>
+<endValue>32</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="nume_selectioner" id="E9303B61-8CE7-CB99-C258-74D2EEC28469">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>C364D8AC-C841-E038-9894-70AF88E39032</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>nume_selectioner_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(nume_selectioner) &gt; 5 and REGEXP_LIKE (nume_selectioner, &apos;[A-Z]{1}[A-Za-z-]+ [A-Z]{1}[A-Za-z-]+$&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Grupe_nationale_ID" id="F9D7133C-EE58-3BBD-9751-E20954B75817">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:10:07 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C3A910B9-2445-AB14-D750-49ACE79B9EC7" referredColumn="7CF9E8F8-F61A-EEC3-E559-4EB1A2E882D4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EF58F7CF-1EBB-499D-4815-F36FDF62DDF3" name="echipa_nationala_PK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>C7F160A8-C7CF-252A-9924-BEC1FB396F06</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D751A7E-2F1C-AD21-EB64-5B0A9C186F2D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EED55661-B95C-586C-DE27-B1E34E633B40" name="Grupe-echipa_nat_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:10:07 UTC</createdTime>
+<generatorID>52A85CBB-6EFE-9AEB-B843-DB18A261C625</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9D7133C-EE58-3BBD-9751-E20954B75817"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

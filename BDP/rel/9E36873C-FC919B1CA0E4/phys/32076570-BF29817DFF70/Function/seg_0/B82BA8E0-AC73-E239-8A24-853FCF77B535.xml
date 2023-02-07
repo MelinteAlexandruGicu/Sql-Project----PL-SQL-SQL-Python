@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FunctionOracle class="oracle.dbtools.crest.model.design.storage.oracle.FunctionOracle" name="get_nr_echipe" directorySegmentName="seg_0" id="B82BA8E0-AC73-E239-8A24-853FCF77B535">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-10 19:05:29 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<source>CREATE OR REPLACE FUNCTION get_nr_echipe(v_id IN liga_de_fotbal.id_liga%TYPE) RETURN NUMBER AS
+v_nr_echipe liga_de_fotbal.numar_echipe%TYPE;
+BEGIN
+	SELECT liga_de_fotbal.numar_echipe
+	INTO v_nr_echipe
+	FROM liga_de_fotbal
+	WHERE id_liga = v_id;
+	RETURN v_nr_echipe;
+END get_nr_echipe;</source>
+</FunctionOracle>

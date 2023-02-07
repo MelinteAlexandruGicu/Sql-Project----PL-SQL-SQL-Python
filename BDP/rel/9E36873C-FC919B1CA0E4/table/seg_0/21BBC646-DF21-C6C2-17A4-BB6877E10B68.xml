@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="21BBC646-DF21-C6C2-17A4-BB6877E10B68" name="Grupe_nationale">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:10:07 UTC</createdTime>
+<generatorID>CBF30CBC-FA75-20E2-96E9-563319CB1BCB</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Grupe_nationale_ID" id="7CF9E8F8-F61A-EEC3-E559-4EB1A2E882D4">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:10:07 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementMinValue>1</autoIncrementMinValue>
+<autoIncrementMaxValue>999</autoIncrementMaxValue>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="numar_echipe_nationale" id="FE32907E-76FD-9040-DE09-228EA9CB5AF7">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:10:07 UTC</createdTime>
+<generatorID>8DA6513B-8FC3-618E-D081-388A4994F353</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>numar_echipe_nationale_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>0</beginValue>
+<endValue>99</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="continent" id="B19759D8-ED84-073F-1B00-A7479B5668CE">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:10:07 UTC</createdTime>
+<generatorID>B5629B83-0FBE-65D1-5587-A2401AEDBBE5</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>continent_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<listOfValues>
+<valueDef value="Africa" description=""/>
+<valueDef value="America" description=""/>
+<valueDef value="Asia" description=""/>
+<valueDef value="Europa" description=""/>
+<valueDef value="Nu este nationala" description=""/>
+<valueDef value="Oceania_si_Australia" description=""/>
+</listOfValues>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EFFC7AE6-37BF-A575-4B80-63F451912FD2" name="Grupe_nationale_PK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:10:07 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="7CF9E8F8-F61A-EEC3-E559-4EB1A2E882D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

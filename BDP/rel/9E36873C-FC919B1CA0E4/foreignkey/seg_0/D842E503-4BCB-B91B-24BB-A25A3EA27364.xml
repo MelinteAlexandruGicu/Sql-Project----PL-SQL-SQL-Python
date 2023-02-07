@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D842E503-4BCB-B91B-24BB-A25A3EA27364" containerWithKeyObject="04657065-FA1D-466B-4B7D-F914423AE55C" localFKIndex="36DD24B3-3D47-B934-AFEA-0527D77A19A5" name="trofee-comp_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>B8586D96-6E6B-A242-0592-FC4A7DE2D4EC</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<referredTableLongName>competitie</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>259A8ACE-7B5B-D8F9-3BC3-D4F680BE33F5</referredTableID>
+<keyObject>83658C8A-6628-FCFF-69FF-56B3943E89B0</keyObject>
+<referredKeyID>83658C8A-6628-FCFF-69FF-56B3943E89B0</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>nume_competitie</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

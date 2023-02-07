@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="echipa_de_club" directorySegmentName="seg_0" id="D5F0F8E7-572D-C63C-02B4-D0467F7CAB40">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="id_liga" id="1AB57225-FBAA-DD80-A1F7-37E36C1F2F76">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 16:00:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="oras" id="42746934-D97A-C0CD-387A-1062EC78D444">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="numar_jucatori" id="61268B66-122B-7C4C-E25A-E27BF689D6D6">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nume_echipa" id="74D06FD0-6D31-3173-5607-CD7E102F7484">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="antrenor_principal" id="8BC3DA09-46B0-2C3B-DBD3-822C8107CA6B">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_club" id="9A597E0E-35ED-DB2B-11CC-340B2D7CEE92">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="liga-echipa_FK" id="79B08F56-8A4F-6D68-0072-AD4C7F99CA05">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 16:00:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="echipa_de_club_PK" id="A7A0C670-77F4-E596-6458-137D1A1D08E6">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="Key_2" id="402C6664-44A6-4272-5444-ED9F0F60DC29">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:57:53 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

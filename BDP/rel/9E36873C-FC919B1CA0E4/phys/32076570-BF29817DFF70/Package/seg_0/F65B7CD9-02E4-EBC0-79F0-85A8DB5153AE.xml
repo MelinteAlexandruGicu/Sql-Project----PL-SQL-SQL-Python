@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<PackageOracle class="oracle.dbtools.crest.model.design.storage.oracle.PackageOracle" name="club" directorySegmentName="seg_0" id="F65B7CD9-02E4-EBC0-79F0-85A8DB5153AE">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 18:20:40 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<source>CREATE OR REPLACE PACKAGE club AS 
+	FUNCTION get_id_club(p_numeEchipa IN echipa_de_club.nume_echipa%TYPE) RETURN NUMBER;
+	PROCEDURE insert_echipa_club(v_numeEchipa IN echipa_de_club.nume_echipa%TYPE, v_oras IN echipa_de_club.oras%TYPE, 
+								v_nrJucatori IN echipa_de_club.numar_jucatori%TYPE, v_antrenor IN echipa_de_club.antrenor_principal%TYPE, v_tara IN echipa_nationala.tara%TYPE);
+	PROCEDURE update_echipa_club(v_id IN echipa_de_club.id_club%TYPE, v_antrenor IN echipa_de_club.antrenor_principal%TYPE);
+	PROCEDURE delete_echipa_club(v_id IN echipa_de_club.id_club%TYPE);
+END club;</source>
+<body class="oracle.dbtools.crest.model.design.storage.oracle.PackageBodyOracle" name="club" id="F65B7CD9-02E4-EBC0-79F0-85A8DB5153AE">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 18:20:47 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<source>CREATE OR REPLACE PACKAGE BODY club AS
+	FUNCTION get_id_club(p_numeEchipa IN echipa_de_club.nume_echipa%TYPE) RETURN NUMBER AS
+	v_id_club echipa_de_club.id_club%TYPE;
+	BEGIN
+		SELECT id_club
+		INTO v_id_club
+		FROM echipa_de_club
+		WHERE nume_echipa = p_numeEchipa;
+		RETURN v_id_club;
+	END get_id_club;
+	
+	PROCEDURE update_echipa_club(v_id IN echipa_de_club.id_club%TYPE, v_antrenor IN echipa_de_club.antrenor_principal%TYPE) IS
+	BEGIN
+		UPDATE echipa_de_club
+		SET antrenor_principal = v_antrenor
+		WHERE id_club = v_id;
+	END update_echipa_club;
+
+	PROCEDURE delete_echipa_club(v_id IN echipa_de_club.id_club%TYPE) IS
+	BEGIN
+		DELETE FROM echipa_de_club
+		WHERE id_club = v_id;
+	END delete_echipa_club;
+	
+	PROCEDURE insert_echipa_club(v_numeEchipa IN echipa_de_club.nume_echipa%TYPE, v_oras IN echipa_de_club.oras%TYPE, 
+								 v_nrJucatori IN echipa_de_club.numar_jucatori%TYPE, v_antrenor IN echipa_de_club.antrenor_principal%TYPE, v_tara IN echipa_nationala.tara%TYPE) IS
+	BEGIN
+		INSERT INTO echipa_de_club VALUES(NULL, v_numeEchipa, v_oras, v_nrJucatori, v_antrenor, liga.get_id_liga(v_tara));
+	END insert_echipa_club;
+END club;</source>
+</body>
+</PackageOracle>

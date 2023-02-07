@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="02E18346-5554-5DD2-3842-AF2F2CFF61CD" name="Directionare">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Palmares_Palmares_ID" id="6E1AF01B-D391-B67C-9E50-C8F93D2DA748">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F3FCC5DF-378B-8483-0B8E-CEBC0BA785B1" referredColumn="A723CFEB-0409-E339-FEF3-E98ACC563261"/>
+</associations>
+</Column>
+<Column name="trofee_trofee_ID" id="5466C524-9CE0-0721-C5E7-40B16D5221E0">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-28 14:34:53 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="59791A03-FB06-207D-589B-9E845C40752C" referredColumn="61E88B4D-5B30-6D66-EB4F-C8F12F59F23F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BFC8082B-A5EC-2F94-64E0-5E3FDEEB11C0" name="palmares-trofee_PK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6E1AF01B-D391-B67C-9E50-C8F93D2DA748"/>
+<colUsage columnID="5466C524-9CE0-0721-C5E7-40B16D5221E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4BE101B7-56FD-B84A-41D1-D027F840D3B8" name="palmares-dir_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<generatorID>50ED4AAE-D11F-D2B8-C75F-D4F52ED8B449</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6E1AF01B-D391-B67C-9E50-C8F93D2DA748"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="054B7C49-A698-0CFC-CE79-37F2A4C0F1B2" name="Directionare_trofee_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-28 14:34:28 UTC</createdTime>
+<generatorID>50ED4AAE-D11F-D2B8-C75F-D4F52ED8B449</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5466C524-9CE0-0721-C5E7-40B16D5221E0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

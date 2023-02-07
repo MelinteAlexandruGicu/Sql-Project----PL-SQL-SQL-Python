@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="jucator_de_fotbal" directorySegmentName="seg_0" id="0C3C9C81-E952-12FE-24B9-6D0CAA77B86B">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:41:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="nume_jucator" id="3AF96B75-F876-B70C-DC1A-B2170098085C">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:41:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_player" id="3CDA4295-34CB-5A7A-FC18-059DDA942793">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:41:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_liga" id="3EC16DE3-119E-04B6-4FC3-2A0C04F2AD4B">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 14:22:43 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="greutate" id="6349C15C-EF63-C966-1B0B-E5585CF94AD3">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:41:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="data_nasterii" id="6AAF933D-C5F9-7CBC-139B-F8B03E7E2200">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:41:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="convocare" id="7FF9D78C-8C16-BFE9-033B-77CA75E853BE">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:41:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="retras" id="814562F8-BC0D-55D6-5FB2-28DC61332C3B">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:41:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="tara" id="961B132C-3A00-B739-67F1-6515C6605266">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 14:22:43 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="numar_goluri" id="96255773-98EE-932A-F642-80DB61C76B96">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:41:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="pozitie" id="A0790582-A9E0-6E20-9590-A02C03AD9FCA">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:41:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_club" id="AC7A193D-6876-C425-2033-8D1FF661350F">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 14:22:43 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="inaltime" id="B1CB2389-9711-0037-0D1B-A0E94289D651">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:41:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="numar_tricou" id="BF541847-3C8C-816B-70CD-F239BFD91099">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:41:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="numar_meciuri" id="D0EBA490-5B4B-D026-DA6E-02672C2D1DCE">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:41:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="atuu" id="DAC84D41-C904-EA05-D380-B19305948251">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:41:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="nationala_jucator_FK" id="EEA9CE1D-7BE3-CD09-C300-D4E6C534A96E">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 14:22:43 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="echipa_jucator_FK" id="F9AD4CE0-61D6-C6D0-248D-3C0D4AD27B5A">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 14:22:43 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="jucator_de_fotbal_PK" id="5FCD2E4C-47D9-49D2-AC36-831D3B40E17A">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:41:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="Key_2v2" id="DF522D44-F9B1-1865-0570-6475D720A318">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 14:22:43 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev12c>

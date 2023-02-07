@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="nationala_jucator_FK" directorySegmentName="seg_0" id="D949BF57-1FD5-06FF-9F11-6BE33955A231">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 14:56:58 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<sourcePk>C7F160A8-C7CF-252A-9924-BEC1FB396F06</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>contine mai multi</nameOnSource>
+<nameOnTarget>poate reprezenta doar o</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>6589ACE7-4BE0-0F95-697F-3AAD1BFFB34A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2EFED7CF-D12B-65DF-B2AA-41B2871C6E24</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

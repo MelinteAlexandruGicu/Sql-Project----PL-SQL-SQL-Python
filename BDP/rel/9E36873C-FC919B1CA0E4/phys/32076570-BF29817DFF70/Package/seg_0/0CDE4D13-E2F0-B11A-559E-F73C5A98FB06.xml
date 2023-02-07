@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<PackageOracle class="oracle.dbtools.crest.model.design.storage.oracle.PackageOracle" name="competitii" directorySegmentName="seg_0" id="0CDE4D13-E2F0-B11A-559E-F73C5A98FB06">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 18:21:18 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<source>CREATE OR REPLACE PACKAGE competitii AS
+	FUNCTION get_competitie(p_id IN liga_de_fotbal.id_liga%TYPE) RETURN VARCHAR2; 
+	PROCEDURE insert_competitie(v_nume IN competitie.nume_competitie%TYPE, v_tip IN competitie.tip%TYPE, v_trofeeInd IN competitie.numar_trofee_individuale%TYPE, 
+											  v_trofeeColec IN competitie.numar_trofee_colective%TYPE, v_tara IN echipa_nationala.tara%TYPE, v_continent grupe_nationale.continent%TYPE);
+	PROCEDURE insert_competitieNat(v_nume IN competitie.nume_competitie%TYPE, v_tip IN competitie.tip%TYPE, v_trofeeInd IN competitie.numar_trofee_individuale%TYPE, 
+											  v_trofeeColec IN competitie.numar_trofee_colective%TYPE, v_tara IN echipa_nationala.tara%TYPE, v_continent grupe_nationale.continent%TYPE);
+END competitii;</source>
+<body class="oracle.dbtools.crest.model.design.storage.oracle.PackageBodyOracle" name="competitii" id="0CDE4D13-E2F0-B11A-559E-F73C5A98FB06">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 18:21:34 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<source>CREATE OR REPLACE PACKAGE BODY competitii AS
+	FUNCTION get_competitie(p_id IN liga_de_fotbal.id_liga%TYPE) RETURN VARCHAR2 AS
+	v_competitie competitie.nume_competitie%TYPE;
+	BEGIN
+		SELECT nume_competitie
+		INTO v_competitie
+		FROM competitie
+		WHERE id_liga = p_id;
+		RETURN v_competitie;
+	END get_competitie;
+ 	
+	PROCEDURE insert_competitie(v_nume IN competitie.nume_competitie%TYPE, v_tip IN competitie.tip%TYPE, v_trofeeInd IN competitie.numar_trofee_individuale%TYPE, 
+											  v_trofeeColec IN competitie.numar_trofee_colective%TYPE, v_tara IN echipa_nationala.tara%TYPE, v_continent grupe_nationale.continent%TYPE) IS
+	BEGIN
+		INSERT INTO competitie VALUES(v_nume, v_tip, v_trofeeInd, v_trofeeColec, liga.get_numar_liga(v_tara), grupe.get_id_grupe(v_continent), liga.get_id_liga(v_tara));
+	END insert_competitie;
+	
+	PROCEDURE insert_competitieNat(v_nume IN competitie.nume_competitie%TYPE, v_tip IN competitie.tip%TYPE, v_trofeeInd IN competitie.numar_trofee_individuale%TYPE, 
+											  v_trofeeColec IN competitie.numar_trofee_colective%TYPE, v_tara IN echipa_nationala.tara%TYPE, v_continent grupe_nationale.continent%TYPE) IS
+	BEGIN
+		INSERT INTO competitie VALUES(v_nume, v_tip, v_trofeeInd, v_trofeeColec, NULL, grupe.get_id_grupe(v_continent), liga.get_id_liga(v_tara));
+	END insert_competitieNat;
+END competitii;</source>
+</body>
+</PackageOracle>

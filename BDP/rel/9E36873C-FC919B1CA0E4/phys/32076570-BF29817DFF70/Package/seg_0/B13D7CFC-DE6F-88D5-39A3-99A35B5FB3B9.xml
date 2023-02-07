@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<PackageOracle class="oracle.dbtools.crest.model.design.storage.oracle.PackageOracle" name="jucator" directorySegmentName="seg_0" id="B13D7CFC-DE6F-88D5-39A3-99A35B5FB3B9">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 18:21:39 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<source>CREATE OR REPLACE PACKAGE jucator AS
+	FUNCTION get_id_player(p_numeJucator IN jucator_de_fotbal.nume_jucator%TYPE) RETURN NUMBER;
+	PROCEDURE insert_jucator(v_numeJucator IN jucator_de_fotbal.nume_jucator%TYPE, v_dataNasterii IN jucator_de_fotbal.data_nasterii%TYPE, v_inaltime IN jucator_de_fotbal.inaltime%TYPE, 
+							 v_greutate IN jucator_de_fotbal.greutate%TYPE, v_pozitie IN jucator_de_fotbal.pozitie%TYPE, v_goluri IN jucator_de_fotbal.numar_goluri%TYPE, 
+							 v_meciuri IN jucator_de_fotbal.numar_meciuri%TYPE, v_tricou IN jucator_de_fotbal.numar_tricou%TYPE,
+							 v_convocare IN jucator_de_fotbal.convocare%TYPE, v_retras IN jucator_de_fotbal.retras%TYPE, v_atuu IN jucator_de_fotbal.atuu%TYPE,
+							 v_echipa IN echipa_de_club.nume_echipa%TYPE, v_nume_selectioner IN echipa_nationala.nume_selectioner%TYPE, v_tara IN echipa_nationala.tara%TYPE);
+	PROCEDURE primire_convocare(v_id IN jucator_de_fotbal.id_player%TYPE);
+END jucator;</source>
+<body class="oracle.dbtools.crest.model.design.storage.oracle.PackageBodyOracle" name="jucator" id="B13D7CFC-DE6F-88D5-39A3-99A35B5FB3B9">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 18:22:14 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<source>CREATE OR REPLACE PACKAGE BODY jucator AS
+	FUNCTION get_id_player(p_numeJucator IN jucator_de_fotbal.nume_jucator%TYPE) RETURN NUMBER AS
+	v_id_player jucator_de_fotbal.id_player%TYPE;
+	BEGIN
+		SELECT id_player
+		INTO v_id_player
+		FROM jucator_de_fotbal
+		WHERE nume_jucator = p_numeJucator;
+		RETURN v_id_player;
+	END get_id_player;
+	
+	PROCEDURE insert_jucator(v_numeJucator IN jucator_de_fotbal.nume_jucator%TYPE, v_dataNasterii IN jucator_de_fotbal.data_nasterii%TYPE, v_inaltime IN jucator_de_fotbal.inaltime%TYPE, 
+							 v_greutate IN jucator_de_fotbal.greutate%TYPE, v_pozitie IN jucator_de_fotbal.pozitie%TYPE, v_goluri IN jucator_de_fotbal.numar_goluri%TYPE, 
+							 v_meciuri IN jucator_de_fotbal.numar_meciuri%TYPE, v_tricou IN jucator_de_fotbal.numar_tricou%TYPE,
+							 v_convocare IN jucator_de_fotbal.convocare%TYPE, v_retras IN jucator_de_fotbal.retras%TYPE, v_atuu IN jucator_de_fotbal.atuu%TYPE,
+							 v_echipa IN echipa_de_club.nume_echipa%TYPE, v_nume_selectioner IN echipa_nationala.nume_selectioner%TYPE, v_tara IN echipa_nationala.tara%TYPE) IS
+	BEGIN
+		INSERT INTO jucator_de_fotbal VALUES(NULL, v_numeJucator, v_dataNasterii, v_inaltime, v_greutate, v_pozitie, v_goluri, v_meciuri, v_tricou, v_convocare, v_retras, v_atuu,
+											 club.get_id_club(v_echipa), nationale.get_tara(v_nume_selectioner), liga.get_id_liga(v_tara));
+	END insert_jucator;
+	
+	PROCEDURE primire_convocare(v_id IN jucator_de_fotbal.id_player%TYPE) IS
+	BEGIN
+		UPDATE jucator_de_fotbal
+		SET convocare = &apos;convocat&apos;
+		WHERE id_player = v_id;
+	END primire_convocare; 
+END jucator;</source>
+</body>
+</PackageOracle>

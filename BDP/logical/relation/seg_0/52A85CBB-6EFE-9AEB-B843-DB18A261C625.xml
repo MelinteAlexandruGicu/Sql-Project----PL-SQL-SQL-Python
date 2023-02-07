@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Grupe-echipa_nat_FK" directorySegmentName="seg_0" id="52A85CBB-6EFE-9AEB-B843-DB18A261C625">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:05:47 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<useSurrogateKey>true</useSurrogateKey>
+<identifying>false</identifying>
+<nameOnSource>contine mai multe</nameOnSource>
+<nameOnTarget>apartine unei singure</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>CBF30CBC-FA75-20E2-96E9-563319CB1BCB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6589ACE7-4BE0-0F95-697F-3AAD1BFFB34A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

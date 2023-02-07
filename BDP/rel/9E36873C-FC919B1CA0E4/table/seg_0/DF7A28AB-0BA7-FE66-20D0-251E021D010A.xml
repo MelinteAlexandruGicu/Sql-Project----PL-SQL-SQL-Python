@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DF7A28AB-0BA7-FE66-20D0-251E021D010A" name="liga_de_fotbal">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>0B5FFD58-FE80-8580-BE89-D432CDA21E6F</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_liga" id="E479E9D5-FAC3-65AE-0DD3-1AF9D1C0ED6A">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 14:26:38 UTC</createdTime>
+<generatorID>2FD71884-1ADB-F329-B6A0-4148D2D375FE</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementMinValue>1</autoIncrementMinValue>
+<autoIncrementMaxValue>99</autoIncrementMaxValue>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numar_liga" id="AADD25A6-E8FC-A48B-5939-5BB56F700844">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>7A2A01E3-7BF5-212D-8EAC-21B18BF3EBEA</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>numar_liga_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<listOfValues>
+<valueDef value="Liga 1" description=""/>
+</listOfValues>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numar_echipe" id="3B63B59C-2D92-E0C7-80B9-36722C3DE5B2">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>40260DE2-1108-B264-A4C0-247C9A4CB2C4</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>numar_echipe_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>16</beginValue>
+<endValue>20</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="numar_competitii" id="D3F0431F-F42D-BDDB-BF0A-850F3FEE4C25">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:20:48 UTC</createdTime>
+<generatorID>44F6C0C1-C174-BD44-DDD0-A5F797E0DED8</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>numar_competitii_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+<endValue>3</endValue>
+</rangeDef>
+</listOfRanges>
+</Column>
+<Column name="tara" id="6B92B63E-C6D0-DAE6-936F-D328BDC2E578">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:26:12 UTC</createdTime>
+<generatorID>BD25AA2C-AB8D-8E8A-08DF-7D054256C690</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>tara-liga_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(tara) &gt;= 3 and REGEXP_LIKE (tara, &apos;^[A-Za-z]+[ A-Za-z]+$&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="157C667E-CF10-8CE1-7E76-D2F2EF2F374E" name="liga_de_fotbal_PK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:56:24 UTC</createdTime>
+<generatorID>5F5BFCC4-67A9-BBDB-F93D-74E30255DB53</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E479E9D5-FAC3-65AE-0DD3-1AF9D1C0ED6A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

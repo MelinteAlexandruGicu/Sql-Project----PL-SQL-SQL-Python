@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Directionare" directorySegmentName="seg_0" id="50ED4AAE-D11F-D2B8-C75F-D4F52ED8B449">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:14 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>poate avea mai multe</nameOnSource>
+<nameOnTarget>pot apartine mai multor</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>26578260-C6B5-9905-FBD9-70BCD07FFC98</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B6F4C44F-3859-E399-8E6F-EF46AD30FFED</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="trofee_individuale" id="6CF09031-0318-B7B1-4A0E-6450CE81C51D">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-28 19:17:12 UTC</createdTime>
+<generatorID>C777BC5D-B017-2FE1-815C-F1C95B2CDA03</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

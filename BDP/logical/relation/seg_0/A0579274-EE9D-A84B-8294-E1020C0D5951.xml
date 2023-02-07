@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="jucator-palmares_FK" directorySegmentName="seg_0" id="A0579274-EE9D-A84B-8294-E1020C0D5951">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:12:07 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<sourcePk>FA537E0F-F323-C534-3390-7D4B8D1A6C57</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>are doar un palmares</nameOnSource>
+<nameOnTarget>apartine doar unui</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2EFED7CF-D12B-65DF-B2AA-41B2871C6E24</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>26578260-C6B5-9905-FBD9-70BCD07FFC98</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

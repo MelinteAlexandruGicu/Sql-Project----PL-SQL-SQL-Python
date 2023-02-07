@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A7999B38-F52A-46BB-2C9B-258CF19EC25B" containerWithKeyObject="259A8ACE-7B5B-D8F9-3BC3-D4F680BE33F5" localFKIndex="9EFF8E3F-87E2-0E87-FEB3-57F46BE381DF" name="grupe-competitie_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 10:17:27 UTC</createdTime>
+<generatorID>DC34D825-41FA-7A12-E1B3-0DA044A2A1DC</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<referredTableLongName>Grupe_nationale</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>21BBC646-DF21-C6C2-17A4-BB6877E10B68</referredTableID>
+<keyObject>EFFC7AE6-37BF-A575-4B80-63F451912FD2</keyObject>
+<referredKeyID>EFFC7AE6-37BF-A575-4B80-63F451912FD2</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Grupe_nationale_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

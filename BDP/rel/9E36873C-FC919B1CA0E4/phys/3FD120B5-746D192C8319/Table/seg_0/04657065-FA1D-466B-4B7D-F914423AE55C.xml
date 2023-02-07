@@ -1,0 +1,54 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="trofee" directorySegmentName="seg_0" id="04657065-FA1D-466B-4B7D-F914423AE55C">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="individuale" id="31D6BDF2-5DFC-94AA-17CC-2DAF10FB28EC">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="anul_trofeului" id="4C9C671E-B5C6-1771-3CE9-D41C82B7237B">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 14:22:43 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="trofee_ID" id="61E88B4D-5B30-6D66-EB4F-C8F12F59F23F">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="colective" id="D49F47A7-DA5E-7302-D1B2-2E4089520AEC">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nume_competitie" id="F8CCC905-D78E-D5E4-367B-3CDB420F573A">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="trofee-comp_FK" id="36DD24B3-3D47-B934-AFEA-0527D77A19A5">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 06:42:37 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="trofee_PK" id="61239E22-0F38-2E6E-E81A-D3B3B762E095">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 14:22:43 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

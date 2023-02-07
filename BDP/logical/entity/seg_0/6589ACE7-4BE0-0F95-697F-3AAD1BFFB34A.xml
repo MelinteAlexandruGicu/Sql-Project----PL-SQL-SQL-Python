@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6589ACE7-4BE0-0F95-697F-3AAD1BFFB34A" name="echipa_nationala">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 15:22:27 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="tara" id="65205A07-3993-CD54-B646-CBC0FFB681E1">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:08:00 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>tara_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(tara) &gt;= 3 and REGEXP_LIKE (tara, &apos;^[A-Z]+[ A-Z]+$&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numar_jucatori_convocati" id="84E98806-1668-EF26-46DE-6F282AE2C3F7">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:08:33 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>numar_jucatori_convocati_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>11</beginValue>
+<endValue>32</endValue>
+</rangeDef>
+</listOfRanges>
+</Attribute>
+<Attribute name="nume_selectioner" id="C364D8AC-C841-E038-9894-70AF88E39032">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:08:56 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="true"/>
+</engineerTo>
+<constraintName>nume_selectioner_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(nume_selectioner) &gt; 5 and REGEXP_LIKE (nume_selectioner, &apos;[A-Z]{1}[A-Za-z-]+ [A-Z]{1}[A-Za-z-]+$&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C7F160A8-C7CF-252A-9924-BEC1FB396F06" name="echipa_nationala_PK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-10 16:08:07 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="9E36873C-1F8C-977E-3C27-FC919B1CA0E4" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>65205A07-3993-CD54-B646-CBC0FFB681E1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

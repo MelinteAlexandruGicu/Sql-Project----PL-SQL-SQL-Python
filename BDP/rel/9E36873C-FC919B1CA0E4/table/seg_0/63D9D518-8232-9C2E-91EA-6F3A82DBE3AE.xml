@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="63D9D518-8232-9C2E-91EA-6F3A82DBE3AE" name="Palmares">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<generatorID>26578260-C6B5-9905-FBD9-70BCD07FFC98</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="premii_individuale" id="404C388A-9EE2-E906-2170-6D33A2E96141">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<generatorID>F67FBAD9-DB31-8B8E-B23D-B56BC6055128</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>premii_individuale_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="premii_individuale &gt;=0"/>
+</checkConstraint>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numar_cupe" id="D19A785F-1907-D6F9-E28E-85F0B71DBE89">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<generatorID>22EDB0C2-2621-3FE5-D11F-9729AA7D957E</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<constraintName>numar_cupe_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="numar_cupe &gt;=0"/>
+</checkConstraint>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_player" id="8550790D-FCBA-B48D-70A7-AA1FB93D2228">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<generatorID>DE11D409-FF28-4BC1-F866-95A9455E79C8</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="85EAFCF7-2287-E048-DA8F-1FBB42559FB2" referredColumn="3CDA4295-34CB-5A7A-FC18-059DDA942793"/>
+</associations>
+</Column>
+<Column name="Palmares_ID" id="A723CFEB-0409-E339-FEF3-E98ACC563261">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="16DEF1B7-6334-1791-1A82-DAA1F0CF586A" name="Palmares_PK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="A723CFEB-0409-E339-FEF3-E98ACC563261"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5BD326C1-E425-F954-78A1-EBA81BF225D6" name="Palmares__IDX">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>A0579274-EE9D-A84B-8294-E1020C0D5951</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="8550790D-FCBA-B48D-70A7-AA1FB93D2228"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A949671B-BBAD-A82A-C88A-7A63A749DDF6" name="jucator-palmares_FK">
+<createdBy>alexm</createdBy>
+<createdTime>2020-11-27 15:22:52 UTC</createdTime>
+<generatorID>A0579274-EE9D-A84B-8294-E1020C0D5951</generatorID>
+<ownerDesignName>BDP</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8550790D-FCBA-B48D-70A7-AA1FB93D2228"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

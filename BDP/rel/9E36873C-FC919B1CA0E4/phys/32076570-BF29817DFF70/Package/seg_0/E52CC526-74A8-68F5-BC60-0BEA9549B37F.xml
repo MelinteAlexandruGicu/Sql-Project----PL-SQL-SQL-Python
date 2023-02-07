@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<PackageOracle class="oracle.dbtools.crest.model.design.storage.oracle.PackageOracle" name="liga" directorySegmentName="seg_0" id="E52CC526-74A8-68F5-BC60-0BEA9549B37F">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 18:18:48 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<source>CREATE OR REPLACE PACKAGE liga AS
+	FUNCTION get_id_liga(p_tara IN echipa_nationala.tara%TYPE) RETURN NUMBER;
+	FUNCTION get_numar_liga(p_tara IN echipa_nationala.tara%TYPE) RETURN VARCHAR2;
+	PROCEDURE modificare_nr_echipe(v_id IN liga_de_fotbal.id_liga%TYPE, semn IN NUMBER);
+        PROCEDURE insert_liga_de_fotbal(v_numar_liga IN liga_de_fotbal.numar_liga%TYPE DEFAULT &apos;Liga 1&apos;, v_nrEchipe IN liga_de_fotbal.numar_echipe%TYPE, 
+								    v_nrComp IN liga_de_fotbal.numar_competitii%TYPE, v_nume_selectioner IN echipa_nationala.nume_selectioner%TYPE);
+        PROCEDURE insert_liga_nationala(v_numar_liga IN liga_de_fotbal.numar_liga%TYPE DEFAULT &apos;Liga 1&apos;, v_nrEchipe IN liga_de_fotbal.numar_echipe%TYPE, 
+								    v_nrComp IN liga_de_fotbal.numar_competitii%TYPE, v_nrEchipeNat IN grupe_nationale.numar_echipe_nationale%TYPE);							
+END liga;</source>
+<body class="oracle.dbtools.crest.model.design.storage.oracle.PackageBodyOracle" name="liga" id="E52CC526-74A8-68F5-BC60-0BEA9549B37F">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 18:19:47 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<source>CREATE OR REPLACE PACKAGE BODY liga AS
+	FUNCTION get_id_liga(p_tara IN echipa_nationala.tara%TYPE) RETURN NUMBER AS
+	v_id liga_de_fotbal.id_liga%TYPE;
+	BEGIN
+		SELECT id_liga
+		INTO v_id
+		FROM liga_de_fotbal
+		WHERE tara = p_tara;
+		RETURN v_id;
+	END get_id_liga;
+	
+	FUNCTION get_numar_liga(p_tara IN echipa_nationala.tara%TYPE) RETURN VARCHAR2 AS
+	v_numar_liga liga_de_fotbal.numar_liga%TYPE;
+	BEGIN
+		SELECT numar_liga
+		INTO v_numar_liga
+		FROM liga_de_fotbal
+		WHERE tara = p_tara;
+		RETURN v_numar_liga;
+	END get_numar_liga;
+	
+	PROCEDURE modificare_nr_echipe(v_id IN liga_de_fotbal.id_liga%TYPE, semn IN NUMBER) IS
+	BEGIN
+		IF semn = -1 THEN
+			UPDATE liga_de_fotbal
+			SET numar_echipe = numar_echipe - 1
+			WHERE id_liga = v_id;
+		END IF;
+		
+		IF semn = 1 THEN
+			UPDATE liga_de_fotbal
+			SET numar_echipe = numar_echipe + 1
+			WHERE id_liga = v_id;
+		END IF;
+	END modificare_nr_echipe;
+	
+	PROCEDURE insert_liga_de_fotbal(v_numar_liga IN liga_de_fotbal.numar_liga%TYPE DEFAULT &apos;Liga 1&apos;, v_nrEchipe IN liga_de_fotbal.numar_echipe%TYPE, 
+									v_nrComp IN liga_de_fotbal.numar_competitii%TYPE, v_nume_selectioner IN echipa_nationala.nume_selectioner%TYPE) IS
+	BEGIN
+		INSERT INTO liga_de_fotbal VALUES(NULL, v_numar_liga, v_nrEchipe, v_nrComp, nationale.get_tara(v_nume_selectioner));
+	END insert_liga_de_fotbal;
+
+	PROCEDURE insert_liga_nationala(v_numar_liga IN liga_de_fotbal.numar_liga%TYPE DEFAULT &apos;Liga 1&apos;, v_nrEchipe IN liga_de_fotbal.numar_echipe%TYPE, 
+									v_nrComp IN liga_de_fotbal.numar_competitii%TYPE, v_nrEchipeNat IN grupe_nationale.numar_echipe_nationale%TYPE) IS
+	BEGIN
+		INSERT INTO liga_de_fotbal VALUES(NULL, v_numar_liga, v_nrEchipe, v_nrComp, grupe.get_continent(v_nrEchipeNat));
+	END insert_liga_nationala;
+END liga;</source>
+</body>
+</PackageOracle>

@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<PackageOracle class="oracle.dbtools.crest.model.design.storage.oracle.PackageOracle" name="nationale" directorySegmentName="seg_0" id="1B5C6F07-026F-1D10-B6DB-D1E3B0BD5578">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 18:18:19 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<source>CREATE OR REPLACE PACKAGE nationale AS
+	FUNCTION get_tara(p_selectioner echipa_nationala.nume_selectioner%TYPE) RETURN VARCHAR2;
+        PROCEDURE insert_echipa_nationala(v_tara IN echipa_nationala.tara%TYPE, v_nrJucatori IN echipa_nationala.numar_jucatori_convocati%TYPE, 
+									 v_nume_selectioner IN echipa_nationala.nume_selectioner%TYPE, v_continent IN grupe_nationale.continent%TYPE);
+END nationale;</source>
+<body class="oracle.dbtools.crest.model.design.storage.oracle.PackageBodyOracle" name="nationale" id="1B5C6F07-026F-1D10-B6DB-D1E3B0BD5578">
+<createdBy>alexm</createdBy>
+<createdTime>2022-05-08 18:18:32 UTC</createdTime>
+<ownerDesignName>BDP</ownerDesignName>
+<source>CREATE OR REPLACE PACKAGE BODY nationale AS
+	FUNCTION get_tara(p_selectioner echipa_nationala.nume_selectioner%TYPE) RETURN VARCHAR2 AS
+	v_tara echipa_nationala.tara%TYPE;
+	BEGIN
+		SELECT tara
+		INTO v_tara
+		FROM echipa_nationala
+		WHERE nume_selectioner = p_selectioner;
+		RETURN v_tara;
+	END get_tara;
+ 
+	PROCEDURE insert_echipa_nationala(v_tara IN echipa_nationala.tara%TYPE, v_nrJucatori IN echipa_nationala.numar_jucatori_convocati%TYPE, 
+									  v_nume_selectioner IN echipa_nationala.nume_selectioner%TYPE, v_continent IN grupe_nationale.continent%TYPE) IS
+	BEGIN
+		INSERT INTO echipa_nationala VALUES(v_tara, v_nrJucatori, v_nume_selectioner, grupe.get_id_grupe(v_continent));
+	END insert_echipa_nationala;
+END nationale;</source>
+</body>
+</PackageOracle>
